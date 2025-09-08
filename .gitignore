@@ -1,7 +1,26 @@
-# .gitignore
+# venvs and caches
+.venv/
 venv/
 __pycache__/
+*.pyc
+
+# secrets
 .env
+
+# generated artifacts
 outputs/
-outputs/audio/
-tests/say.bat
+outputs/**/*.wav
+outputs/**/*.png
+plan*.md
+
+# local tools and large binaries
+tools/
+
+# ad-hoc files
+api_call-backup.py
+test/
+test.png
+
+# OS cruft
+.DS_Store
+Thumbs.db
