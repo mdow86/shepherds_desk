@@ -1,0 +1,28 @@
+Return ONLY valid JSON. No prose, no markdown.
+
+Task: Create a 60-second plan with EXACTLY 6 clips of 10 seconds each for a personalized video from Bible guidance.
+
+Schema:
+{
+  "title": "string",
+  "clips": [
+    {
+      "index": 1-6,
+      "start_sec": number,
+      "end_sec": number,
+      "dialogue": "string",
+      "verse_refs": ["Book ch:vs", ...],
+      "image_prompt": "string",
+      "subtitle": "string"
+    }
+  ]
+}
+
+Rules:
+- Exactly 6 clips, each 10s, covering seconds [0,60).
+- Dialogue must be speakable as-is for TTS. No verse text; paraphrase only. Put citations in verse_refs.
+- image_prompt must be concrete, cinematic, aspect 16:9, no text or watermarks.
+- Output must parse as JSON with the schema above. Do not include any extra text.
+
+User input:
+{{USER_PROMPT}}
