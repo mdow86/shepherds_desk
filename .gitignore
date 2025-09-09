@@ -9,8 +9,7 @@ __pycache__/
 
 # generated artifacts
 outputs/
-outputs/**/*.wav
-outputs/**/*.png
+outputs/*
 plan*.md
 
 # local tools and large binaries

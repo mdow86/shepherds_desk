@@ -4,3 +4,5 @@ python-dotenv
 PyJWT
 jsonschema
 pytest
+moviepy==1.0.3
+imageio-ffmpeg
