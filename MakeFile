@@ -1,0 +1,5 @@
+dev:
+\tdocker compose -f infra/docker-compose.yml up --build
+
+api-local:
+\tuvicorn apps.api.main:app --reload --port 8000

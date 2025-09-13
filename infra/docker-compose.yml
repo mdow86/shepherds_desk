@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    env_file: ../.env
+    environment:
+      - SDESK_BASE=/app
+    ports: ["8000:8000"]
+    volumes:
+      - ../packages:/app/packages
+      - ../apps:/app/apps
+  web:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.web
+    ports: ["5173:5173"]
+    depends_on: [api]
